@@ -6,25 +6,16 @@
 5 rename all properties
 */
 
-/*
-var nodes = document.getElementByTagName("INPUT");
-	for (var i = nodes.length - 1; i >= 0; i--) {
-		var type = nodes[i].nodeType;
-		if ( type == "number"){
-			nodes[i].addEventListener("change",trackChange);
-		}
-	}
-*/
-
+//document.getElementsByTagName("BODY")[0].addEventListener("mousemove", trackMouseMovement);
 window.addEventListener("click", trackMouseClick);
 window.addEventListener("mousemove", trackMouseMovement);
 window.addEventListener("wheel", trackWheel);
 window.addEventListener("resize", trackResize);
 
-var clickSize = 10; // the max lenght of object
+var clickSize = 50; // the max lenght of object
 var mousemoveSize = 100;
-var wheelSize = 10;
-var resizeSize = 4;
+var wheelSize = 100;
+var resizeSize = 100;
 
 var mouseClickCoordinates = {type:"click",date:getDate(),coordinates:[]}
 var mouseMoveCoordinates = {type:"mousemove",date:getDate(),coordinates:[]}
